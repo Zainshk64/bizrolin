@@ -18,7 +18,7 @@ const HomeLoader = () => {
         return () => clearInterval(interval);
     }, []);
 
-    const letters = "PANORAMA".split("");
+    const letters = "BIZROLIN".split("");
 
     return (
         <motion.div
