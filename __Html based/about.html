@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Panorama Group</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --white: #FFFFFF;
+            --off-white: #0a0a0a;
+            --light-gray: #1a1a2e;
+            --gray: #94A3B8;
+            --dark: #FFFFFF;
+            --darker: #030014;
+            --accent: #6366F1;
+            --accent-light: #818CF8;
+            --cyan: #06B6D4;
+            --gradient: linear-gradient(135deg, #6366F1 0%, #06B6D4 100%);
+        }
+
+        html.has-scroll-smooth {
+            overflow: hidden;
+        }
+
+        html.has-scroll-smooth body {
+            overflow: hidden;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--darker);
+            color: var(--dark);
+            cursor: none;
+        }
+
+        /* Animated Background */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .bg-animation::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(139, 92, 246, 0.1) 0%, transparent 40%);
+            animation: bgMove 20s ease-in-out infinite;
+        }
+
+        @keyframes bgMove {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(-5%, 5%) rotate(5deg); }
+            50% { transform: translate(5%, -5%) rotate(-5deg); }
+            75% { transform: translate(-3%, -3%) rotate(3deg); }
+        }
+
+        /* Floating Particles */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(99, 102, 241, 0.5);
+            border-radius: 50%;
+            animation: float 15s infinite;
+        }
+
+        .particle:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 20s; }
+        .particle:nth-child(2) { left: 20%; animation-delay: 2s; animation-duration: 18s; }
+        .particle:nth-child(3) { left: 30%; animation-delay: 4s; animation-duration: 22s; }
+        .particle:nth-child(4) { left: 40%; animation-delay: 1s; animation-duration: 19s; }
+        .particle:nth-child(5) { left: 50%; animation-delay: 3s; animation-duration: 21s; }
+        .particle:nth-child(6) { left: 60%; animation-delay: 5s; animation-duration: 17s; }
+        .particle:nth-child(7) { left: 70%; animation-delay: 2s; animation-duration: 23s; }
+        .particle:nth-child(8) { left: 80%; animation-delay: 4s; animation-duration: 20s; }
+        .particle:nth-child(9) { left: 90%; animation-delay: 1s; animation-duration: 18s; }
+        .particle:nth-child(10) { left: 95%; animation-delay: 3s; animation-duration: 22s; }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) scale(0); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100vh) scale(1); opacity: 0; }
+        }
+
+        /* Cursor */
+        .cursor {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--accent);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 99999;
+            transition: transform 0.1s ease, width 0.3s, height 0.3s;
+            transform: translate(-50%, -50%);
+            mix-blend-mode: difference;
+        }
+
+        .cursor-follower {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 99998;
+            transition: transform 0.3s ease;
+            transform: translate(-50%, -50%);
+        }
+
+        .cursor.hover {
+            width: 60px;
+            height: 60px;
+            background: rgba(99, 102, 241, 0.2);
+        }
+
+        /* Page Transition */
+        .page-transition {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--darker);
+            z-index: 99999;
+            transform: translateY(-100%);
+            pointer-events: none;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 30px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: rgba(3, 0, 20, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--white);
+            text-decoration: none;
+            letter-spacing: -1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 50px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--gray);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--white);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .nav-contact {
+            color: var(--white);
+            background: var(--gradient);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 15px 30px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-contact:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+        }
+
+        /* Hero Section */
+        .about-hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 150px 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-hero::before {
+            content: 'ABOUT';
+            position: absolute;
+            bottom: -100px;
+            right: -50px;
+            font-size: 30vw;
+            font-weight: 900;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(6, 182, 212, 0.05) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            pointer-events: none;
+        }
+
+        .about-hero-content {
+            max-width: 800px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .page-tag {
+            display: inline-block;
+            padding: 10px 25px;
+            background: rgba(99, 102, 241, 0.2);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--accent-light);
+            margin-bottom: 30px;
+        }
+
+        .about-hero h1 {
+            font-size: 5rem;
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -3px;
+            margin-bottom: 30px;
+            color: var(--white);
+        }
+
+        .text-gradient {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .about-hero p {
+            font-size: 1.4rem;
+            color: var(--gray);
+            line-height: 1.8;
+        }
+
+        .about-hero-image {
+            position: absolute;
+            right: 100px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 500px;
+            height: 600px;
+            background: var(--gradient);
+            border-radius: 300px 300px 0 0;
+            overflow: hidden;
+            opacity: 0.8;
+            box-shadow: 0 0 100px rgba(99, 102, 241, 0.3);
+        }
+
+        .about-hero-image::before {
+            content: '🏢';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 200px;
+        }
+
+        /* Story Section */
+        .story-section {
+            padding: 150px 100px;
+            background: rgba(10, 10, 10, 0.5);
+            border-top: 1px solid rgba(99, 102, 241, 0.1);
+            border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 100px;
+            max-width: 1400px;
+            margin: 0 auto;
+            align-items: center;
+        }
+
+        .story-content h2 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 30px;
+            letter-spacing: -2px;
+            color: var(--white);
+        }
+
+        .story-content p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            line-height: 1.9;
+            margin-bottom: 20px;
+        }
+
+        .story-image {
+            position: relative;
+        }
+
+        .story-image-main {
+            width: 100%;
+            height: 500px;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(6, 182, 212, 0.2) 100%);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .story-image-main::before {
+            content: '📊';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 150px;
+        }
+
+        .story-year {
+            position: absolute;
+            bottom: -30px;
+            right: -30px;
+            background: var(--gradient);
+            color: var(--white);
+            padding: 30px 50px;
+            border-radius: 20px;
+            font-size: 3rem;
+            font-weight: 900;
+            box-shadow: 0 20px 50px rgba(99, 102, 241, 0.4);
+        }
+
+        /* Values Section */
+        .values-section {
+            padding: 150px 100px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-header h2 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            letter-spacing: -2px;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--gray);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .value-card {
+            background: rgba(99, 102, 241, 0.05);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 30px;
+            padding: 50px 40px;
+            text-align: center;
+            transition: all 0.5s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-20px);
+            border-color: var(--accent);
+            background: rgba(99, 102, 241, 0.1);
+            box-shadow: 0 30px 60px rgba(99, 102, 241, 0.2);
+        }
+
+        .value-icon {
+            width: 100px;
+            height: 100px;
+            background: var(--gradient);
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            margin: 0 auto 30px;
+            transition: all 0.5s ease;
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+        }
+
+        .value-card:hover .value-icon {
+            transform: scale(1.1) rotate(10deg);
+        }
+
+        .value-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--white);
+        }
+
+        .value-card p {
+            color: var(--gray);
+            line-height: 1.8;
+        }
+
+        /* Timeline Section */
+        .timeline-section {
+            padding: 150px 100px;
+            background: rgba(10, 10, 10, 0.5);
+            border-top: 1px solid rgba(99, 102, 241, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .timeline-section .section-header h2 {
+            color: var(--white);
+        }
+
+        .timeline-section .section-header p {
+            color: var(--gray);
+        }
+
+        .timeline {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(99, 102, 241, 0.5), rgba(6, 182, 212, 0.5));
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 60px;
+            position: relative;
+            margin-bottom: 60px;
+            width: 50%;
+        }
+
+        .timeline-item:nth-child(even) {
+            justify-content: flex-start;
+            padding-right: 0;
+            padding-left: 60px;
+            margin-left: auto;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: var(--gradient);
+            border-radius: 50%;
+            right: -10px;
+            top: 20px;
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+        }
+
+        .timeline-item:nth-child(even)::before {
+            right: auto;
+            left: -10px;
+        }
+
+        .timeline-content {
+            background: rgba(99, 102, 241, 0.05);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 400px;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            background: rgba(99, 102, 241, 0.1);
+            transform: scale(1.05);
+            border-color: var(--accent);
+        }
+
+        .timeline-year {
+            font-size: 2rem;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .timeline-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--white);
+        }
+
+        .timeline-content p {
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        /* Team Section */
+        .team-section {
+            padding: 150px 100px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .team-card {
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .team-image {
+            width: 100%;
+            aspect-ratio: 1;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 30px;
+            margin-bottom: 25px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s ease;
+        }
+
+        .team-image::before {
+            content: '👤';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 80px;
+        }
+
+        .team-card:hover .team-image {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(99, 102, 241, 0.3);
+            border-color: var(--accent);
+        }
+
+        .team-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: var(--white);
+        }
+
+        .team-card p {
+            color: var(--accent-light);
+            font-weight: 500;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            padding: 100px;
+            background: var(--gradient);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .stat-item h3 {
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--white);
+            margin-bottom: 10px;
+        }
+
+        .stat-item p {
+            color: rgba(255,255,255,0.8);
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 100px;
+            background: rgba(3, 0, 20, 0.9);
+            border-top: 1px solid rgba(99, 102, 241, 0.1);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+            max-width: 1400px;
+            margin: 0 auto 80px;
+        }
+
+        .footer-brand h3 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .footer-brand p {
+            color: var(--gray);
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 15px;
+        }
+
+        .footer-social a {
+            width: 50px;
+            height: 50px;
+            background: rgba(99, 102, 241, 0.2);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background: var(--accent);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+        }
+
+        .footer-column h4 {
+            color: var(--white);
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 15px;
+        }
+
+        .footer-column ul li a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--accent-light);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 40px;
+            border-top: 1px solid rgba(99, 102, 241, 0.1);
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-bottom p {
+            color: var(--gray);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .footer-links a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-light);
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .about-hero h1 {
+                font-size: 4rem;
+            }
+            
+            .about-hero-image {
+                width: 350px;
+                height: 450px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .nav {
+                padding: 20px 30px;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .about-hero {
+                padding: 150px 50px;
+            }
+            
+            .about-hero h1 {
+                font-size: 3rem;
+            }
+            
+            .about-hero-image {
+                display: none;
+            }
+            
+            .story-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .timeline-item,
+            .timeline-item:nth-child(even) {
+                width: 100%;
+                padding-left: 60px;
+                padding-right: 0;
+            }
+            
+            .timeline::before {
+                left: 0;
+            }
+            
+            .timeline-item::before,
+            .timeline-item:nth-child(even)::before {
+                left: -10px;
+                right: auto;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .about-hero {
+                padding: 120px 30px;
+            }
+            
+            .about-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .story-section,
+            .values-section,
+            .timeline-section,
+            .team-section {
+                padding: 100px 30px;
+            }
+            
+            .section-header h2 {
+                font-size: 2.5rem;
+            }
+            
+            .stats-section {
+                padding: 60px 30px;
+            }
+            
+            .stat-item h3 {
+                font-size: 2.5rem;
+            }
+            
+            .footer {
+                padding: 60px 30px;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+            
+            .cursor, .cursor-follower {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Animation -->
+    <div class="bg-animation"></div>
+    
+    <!-- Floating Particles -->
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Page Transition -->
+    <div class="page-transition"></div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="index.html" class="nav-logo page-link">PANORAMA</a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="page-link">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="brands.html" class="page-link">Our Brands</a></li>
+            <li><a href="contact.html" class="page-link">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="nav-contact page-link">Let's Talk</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main data-scroll-container>
+        <!-- Hero -->
+        <section class="about-hero" data-scroll-section>
+            <div class="about-hero-content">
+                <span class="page-tag">About Panorama</span>
+                <h1 data-scroll data-scroll-speed="1">Building a <span class="text-gradient">Better Tomorrow</span></h1>
+                <p>For over 25 years, we've been pioneering innovation across industries. From humble beginnings to a global conglomerate, our journey is defined by excellence, integrity, and an unwavering commitment to creating value.</p>
+            </div>
+            <div class="about-hero-image" data-scroll data-scroll-speed="2"></div>
+        </section>
+
+        <!-- Story -->
+        <section class="story-section" data-scroll-section>
+            <div class="story-grid">
+                <div class="story-content" data-scroll data-scroll-speed="1">
+                    <h2>Our <span class="text-gradient">Story</span></h2>
+                    <p>What started as a small trading company in 1995 has grown into a diversified conglomerate spanning seven industries across 45 countries.</p>
+                    <p>Our founder's vision was simple: create businesses that not only generate profit but also contribute positively to society and the environment. This vision continues to guide us today.</p>
+                    <p>Through strategic acquisitions, organic growth, and a relentless focus on innovation, we've built a family of companies that are leaders in their respective fields.</p>
+                </div>
+                <div class="story-image" data-scroll data-scroll-speed="2">
+                    <div class="story-image-main"></div>
+                    <div class="story-year">1995</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values -->
+        <section class="values-section" data-scroll-section>
+            <div class="section-header">
+                <h2>Our <span class="text-gradient">Values</span></h2>
+                <p>The principles that guide every decision we make</p>
+            </div>
+            <div class="values-grid">
+                <div class="value-card" data-scroll data-scroll-speed="1">
+                    <div class="value-icon">🎯</div>
+                    <h3>Integrity</h3>
+                    <p>We do what's right, even when no one is watching. Honesty and transparency are the foundation of all our relationships.</p>
+                </div>
+                <div class="value-card" data-scroll data-scroll-speed="1.5">
+                    <div class="value-icon">💡</div>
+                    <h3>Innovation</h3>
+                    <p>We constantly push boundaries and challenge the status quo to find better solutions for tomorrow's challenges.</p>
+                </div>
+                <div class="value-card" data-scroll data-scroll-speed="2">
+                    <div class="value-icon">⭐</div>
+                    <h3>Excellence</h3>
+                    <p>We strive for the highest standards in everything we do, never settling for anything less than our best.</p>
+                </div>
+                <div class="value-card" data-scroll data-scroll-speed="1">
+                    <div class="value-icon">🌍</div>
+                    <h3>Sustainability</h3>
+                    <p>We're committed to creating value that lasts, protecting our planet for future generations.</p>
+                </div>
+                <div class="value-card" data-scroll data-scroll-speed="1.5">
+                    <div class="value-icon">👥</div>
+                    <h3>People First</h3>
+                    <p>Our people are our greatest asset. We invest in their growth and create an environment where they can thrive.</p>
+                </div>
+                <div class="value-card" data-scroll data-scroll-speed="2">
+                    <div class="value-icon">🤝</div>
+                    <h3>Collaboration</h3>
+                    <p>We believe in the power of working together, both within our organization and with our partners.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline -->
+        <section class="timeline-section" data-scroll-section>
+            <div class="section-header">
+                <h2>Our <span class="text-gradient">Journey</span></h2>
+                <p>Key milestones in our growth story</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-scroll data-scroll-speed="1">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1995</div>
+                        <h3>Foundation</h3>
+                        <p>Panorama Group was founded as a small trading company in Dubai.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-scroll data-scroll-speed="1">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2002</div>
+                        <h3>Global Expansion</h3>
+                        <p>Expanded operations to Europe with the establishment of Global Resources UK.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-scroll data-scroll-speed="1">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2008</div>
+                        <h3>Diversification</h3>
+                        <p>Entered the technology sector with the launch of System Technologies.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-scroll data-scroll-speed="1">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2015</div>
+                        <h3>Food & Entertainment</h3>
+                        <p>Launched Panorama Foods and Panorama Entertainment divisions.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-scroll data-scroll-speed="1">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2023</div>
+                        <h3>$10B Revenue</h3>
+                        <p>Achieved $10 billion in annual revenue with operations in 45 countries.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team -->
+        <section class="team-section" data-scroll-section>
+            <div class="section-header">
+                <h2>Leadership <span class="text-gradient">Team</span></h2>
+                <p>Meet the visionaries guiding our journey</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card" data-scroll data-scroll-speed="1">
+                    <div class="team-image"></div>
+                    <h3>Ahmed Al-Rashid</h3>
+                    <p>Chairman & CEO</p>
+                </div>
+                <div class="team-card" data-scroll data-scroll-speed="1.2">
+                    <div class="team-image"></div>
+                    <h3>Sarah Mitchell</h3>
+                    <p>Chief Operating Officer</p>
+                </div>
+                <div class="team-card" data-scroll data-scroll-speed="1.4">
+                    <div class="team-image"></div>
+                    <h3>Michael Chen</h3>
+                    <p>Chief Financial Officer</p>
+                </div>
+                <div class="team-card" data-scroll data-scroll-speed="1.6">
+                    <div class="team-image"></div>
+                    <h3>Fatima Hassan</h3>
+                    <p>Chief Strategy Officer</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats -->
+        <section class="stats-section" data-scroll-section>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3 data-scroll>45+</h3>
+                    <p>Countries</p>
+                </div>
+                <div class="stat-item">
+                    <h3 data-scroll>15,000+</h3>
+                    <p>Employees</p>
+                </div>
+                <div class="stat-item">
+                    <h3 data-scroll>7</h3>
+                    <p>Industries</p>
+                </div>
+                <div class="stat-item">
+                    <h3 data-scroll>$10B+</h3>
+                    <p>Revenue</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer" data-scroll-section>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>PANORAMA</h3>
+                    <p>A global conglomerate connecting innovation across industries.</p>
+                    <div class="footer-social">
+                        <a href="#">Li</a>
+                        <a href="#">Tw</a>
+                        <a href="#">Fb</a>
+                        <a href="#">Ig</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="brands.html" class="page-link">Our Brands</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Brands</h4>
+                    <ul>
+                        <li><a href="#">Global Resources</a></li>
+                        <li><a href="#">System Technologies</a></li>
+                        <li><a href="#">Panorama Foods</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="#">Dubai, UAE</a></li>
+                        <li><a href="#">info@panorama.com</a></li>
+                        <li><a href="contact.html" class="page-link">Contact Form</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Panorama Group. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    
+    <script>
+        // Cursor
+        const cursor = document.querySelector('.cursor');
+        const follower = document.querySelector('.cursor-follower');
+
+        document.addEventListener('mousemove', (e) => {
+            gsap.to(cursor, { x: e.clientX, y: e.clientY, duration: 0.1 });
+            gsap.to(follower, { x: e.clientX, y: e.clientY, duration: 0.3 });
+        });
+
+        document.querySelectorAll('a, button').forEach(el => {
+            el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+            el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+        });
+
+        // Locomotive Scroll
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector('[data-scroll-container]'),
+            smooth: true,
+            multiplier: 0.8,
+            lerp: 0.05
+        });
+
+        // Page Transitions
+        const pageTransition = document.querySelector('.page-transition');
+        document.querySelectorAll('.page-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const href = link.getAttribute('href');
+                gsap.to(pageTransition, {
+                    yPercent: 100,
+                    duration: 0.5,
+                    ease: 'power4.inOut',
+                    onComplete: () => window.location.href = href
+                });
+            });
+        });
+
+        // Animations
+        gsap.from('.page-tag', { y: 30, opacity: 0, duration: 1, delay: 0.3 });
+        gsap.from('.about-hero h1', { y: 50, opacity: 0, duration: 1, delay: 0.5 });
+        gsap.from('.about-hero p', { y: 30, opacity: 0, duration: 1, delay: 0.7 });
+        gsap.from('.about-hero-image', { x: 100, opacity: 0, duration: 1, delay: 0.9 });
+    </script>
+</body>
+</html>

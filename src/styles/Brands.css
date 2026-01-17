@@ -1,0 +1,425 @@
+/* src/pages/Brands.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+
+.brands-page-wrapper {
+    font-family: 'Outfit', sans-serif;
+    background: #030014;
+    color: #ffffff;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Animated Background */
+.bg-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.2) 0%, transparent 60%);
+    animation: bgPulse 8s ease-in-out infinite;
+}
+
+@keyframes bgPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* Floating Particles */
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #6366F1;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #6366F1, 0 0 40px #6366F1;
+    animation: floatUp 15s infinite linear;
+}
+
+.particle:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.particle:nth-child(2) {
+    left: 25%;
+    animation-delay: 2s;
+}
+
+.particle:nth-child(3) {
+    left: 40%;
+    animation-delay: 4s;
+}
+
+.particle:nth-child(4) {
+    left: 55%;
+    animation-delay: 1s;
+}
+
+.particle:nth-child(5) {
+    left: 70%;
+    animation-delay: 3s;
+}
+
+.particle:nth-child(6) {
+    left: 85%;
+    animation-delay: 5s;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(100vh) scale(0);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100vh) scale(1);
+        opacity: 0;
+    }
+}
+
+/* Main Content Wrapper */
+.main-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Hero Section */
+.brands-hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 180px 50px 100px;
+    position: relative;
+}
+
+.brands-hero h1 {
+    font-size: 5rem;
+    font-weight: 900;
+    letter-spacing: -3px;
+    margin-bottom: 25px;
+    color: white;
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, #6366F1 0%, #06B6D4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.brands-hero p {
+    font-size: 1.4rem;
+    color: #94A3B8;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Brands Section */
+.brands-section {
+    padding: 50px 80px 150px;
+}
+
+.brands-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Brand Card */
+.brandp-card {
+    background: rgba(99, 102, 241, 0.08);
+    border: 1px solid rgba(99, 102, 241, 0.25);
+    border-radius: 30px;
+    padding: 50px;
+    transition: all 0.4s ease;
+    /* GSAP reveal helpers */
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.brandp-card:hover {
+    transform: translateY(-15px) !important;
+    /* Override inline styles on hover */
+    border-color: #6366F1;
+    box-shadow: 0 40px 80px rgba(99, 102, 241, 0.25);
+    background: rgba(99, 102, 241, 0.12);
+}
+
+.brandp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.brandp-logo {
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(135deg, #6366F1 0%, #06B6D4 100%);
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    box-shadow: 0 15px 40px rgba(99, 102, 241, 0.35);
+    transition: all 0.4s ease;
+}
+
+.brandp-card:hover .brandp-logo {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.brandp-arrow {
+    width: 55px;
+    height: 55px;
+    border: 2px solid rgba(99, 102, 241, 0.4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94A3B8;
+    transition: all 0.3s ease;
+}
+
+.brandp-card:hover .brandp-arrow {
+    background: #6366F1;
+    border-color: #6366F1;
+    color: #ffffff;
+    transform: rotate(45deg);
+}
+
+.brandp-info h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.brandp-info p {
+    color: #94A3B8;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    margin-bottom: 25px;
+}
+
+.brandp-stats {
+    display: flex;
+    gap: 35px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.brandp-stat h4 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #6366F1 0%, #06B6D4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 5px;
+}
+
+.brandp-stat p {
+    font-size: 0.9rem;
+    color: #94A3B8;
+    margin: 0;
+}
+
+.brandp-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.brandp-tag {
+    padding: 8px 18px;
+    background: rgba(99, 102, 241, 0.2);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    border-radius: 50px;
+    font-size: 0.85rem;
+    color: #818CF8;
+    font-weight: 500;
+}
+
+/* Full Width Card */
+.brandp-card.full-width {
+    grid-column: span 2;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.brandp-card.full-width .brandp-content {
+    flex: 1;
+}
+
+.brandp-visual {
+    width: 350px;
+    height: 280px;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(99, 102, 241, 0.35);
+    flex-shrink: 0;
+    position: relative;
+}
+
+.brandp-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.brandp-card:hover .brandp-visual img {
+    transform: scale(1.05);
+}
+
+/* CTA Section */
+.brands-cta {
+    padding: 150px 80px;
+    text-align: center;
+    border-top: 1px solid rgba(99, 102, 241, 0.15);
+    position: relative;
+}
+
+.brands-cta::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.2) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.brands-cta h2 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+.brands-cta>p {
+    font-size: 1.3rem;
+    color: #94A3B8;
+    margin-bottom: 45px;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding: 22px 55px;
+    background: linear-gradient(135deg, #6366F1 0%, #06B6D4 100%);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.15rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 20px 50px rgba(99, 102, 241, 0.4);
+    position: relative;
+    z-index: 1;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 30px 70px rgba(99, 102, 241, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .brandp-card.full-width {
+        flex-direction: column;
+    }
+
+    .brandp-visual {
+        width: 100%;
+        height: 250px;
+    }
+}
+
+@media (max-width: 992px) {
+    .brands-hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .brands-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .brandp-card.full-width {
+        grid-column: span 1;
+    }
+
+    .brands-section {
+        padding: 50px 30px 100px;
+    }
+
+    .brands-cta {
+        padding: 100px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .brands-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .brands-cta h2 {
+        font-size: 2.2rem;
+    }
+
+    .brandp-stats {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
