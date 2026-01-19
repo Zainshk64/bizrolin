@@ -68,10 +68,10 @@ const About = () => {
     ];
 
     const timeline = [
-        { year: "1995", title: "Foundation", desc: "Panorama Group was founded as a small trading company in Dubai." },
+        { year: "1995", title: "Foundation", desc: "Bizrolin Group was founded as a small trading company in Dubai." },
         { year: "2002", title: "Global Expansion", desc: "Expanded operations to Europe with the establishment of Global Resources UK." },
         { year: "2008", title: "Diversification", desc: "Entered the technology sector with the launch of System Technologies." },
-        { year: "2015", title: "Food & Entertainment", desc: "Launched Panorama Foods and Panorama Entertainment divisions." },
+        { year: "2015", title: "Food & Entertainment", desc: "Launched Bizrolin Foods and Bizrolin Entertainment divisions." },
         { year: "2023", title: "$10B Revenue", desc: "Achieved $10 billion in annual revenue with operations in 45 countries." }
     ];
 
@@ -108,7 +108,7 @@ const About = () => {
                 {/* Hero Section */}
                 <section className="about-hero" data-scroll-section>
                     <div className="about-hero-content">
-                        <span className="page-tag">About Panorama</span>
+                        <span className="page-tag">About Bizrolin</span>
                         <h1 data-scroll data-scroll-speed="1">
                             Building a <span className="text-gradient">Better Tomorrow</span>
                         </h1>
@@ -139,7 +139,7 @@ BizRolin is an all-in-one business ecosystem delivering smart, scalable solution
                                 alt="Modern corporate headquarters representing growth"
                                 style={{ borderRadius: '30px', width: '100%', height: '500px', objectFit: 'cover' }}
                             />
-                            <div className="story-year">1974</div>
+                            <div className="story-year">2024</div>
                         </div>
                     </div>
                 </section>

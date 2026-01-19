@@ -12,7 +12,6 @@ const footerLinks = {
   brands: [
     { name: "Global Resources", href: "#" },
     { name: "System Technologies", href: "#" },
-    { name: "Panorama Foods", href: "#" },
     { name: "Vision Chemtech", href: "#" },
   ],
   company: [

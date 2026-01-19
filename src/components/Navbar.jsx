@@ -30,6 +30,7 @@ const Navbar = () => {
                     BR
                 </span>
                 <span className="font-serif text-2xl font-bold text-white">BizRolin</span>
+                {/* <img src="./logonew.png" alt="BizRolin Logo" classname="h" /> */}
             </Link>
 
             {/* Nav Links */}

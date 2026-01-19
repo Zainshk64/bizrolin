@@ -139,23 +139,23 @@ const Contact = () => {
     // FAQ Data
     const faqs = [
         {
-            question: "What industries does Panorama Group operate in?",
-            answer: "Panorama Group operates across seven major industries including Technology, Global Trade, Food & Beverage, Entertainment, Chemical Manufacturing, Packaging Solutions, and Infrastructure Development. Our diversified portfolio allows us to leverage synergies across sectors."
+            question: "What industries does Bizrolin Group operate in?",
+            answer: "Bizrolin Group operates across seven major industries including Technology, Global Trade, Food & Beverage, Entertainment, Chemical Manufacturing, Packaging Solutions, and Infrastructure Development. Our diversified portfolio allows us to leverage synergies across sectors."
         },
         {
             question: "How can I explore partnership opportunities?",
-            answer: "We welcome partnership inquiries from businesses worldwide. Please fill out the contact form above selecting \"Partnership Opportunity\" as the subject, or email us directly at partnerships@panoramagroup.com. Our business development team reviews all inquiries within 48 hours."
+            answer: "We welcome partnership inquiries from businesses worldwide. Please fill out the contact form above selecting \"Partnership Opportunity\" as the subject, or email us directly at partnerships@Bizrolingroup.com. Our business development team reviews all inquiries within 48 hours."
         },
         {
-            question: "Does Panorama Group offer investment opportunities?",
-            answer: "Yes, we offer various investment opportunities for qualified investors. Please contact our Investor Relations team at investors@panoramagroup.com for more information about current opportunities, minimum investment requirements, and our investment philosophy."
+            question: "Does Bizrolin Group offer investment opportunities?",
+            answer: "Yes, we offer various investment opportunities for qualified investors. Please contact our Investor Relations team at investors@Bizrolingroup.com for more information about current opportunities, minimum investment requirements, and our investment philosophy."
         },
         {
-            question: "How can I apply for a job at Panorama Group?",
-            answer: "We're always looking for talented individuals to join our team. Visit our Careers page to view current openings across all our brands and locations. You can also send your CV to careers@panoramagroup.com for future opportunities."
+            question: "How can I apply for a job at Bizrolin Group?",
+            answer: "We're always looking for talented individuals to join our team. Visit our Careers page to view current openings across all our brands and locations. You can also send your CV to careers@Bizrolingroup.com for future opportunities."
         },
         {
-            question: "What is Panorama Group's approach to sustainability?",
+            question: "What is Bizrolin Group's approach to sustainability?",
             answer: "Sustainability is core to our operations. We've committed to achieving carbon neutrality by 2030 and have implemented sustainable practices across all our businesses. Our annual sustainability report details our environmental initiatives, social responsibility programs, and governance standards."
         }
     ];
@@ -224,8 +224,8 @@ const Contact = () => {
                                 <div className="contact-card-content">
                                     <h3>Email Us</h3>
                                     <p>
-                                        General: <a href="mailto:info@panoramagroup.com">info@Bizrolin.com</a><br />
-                                        Support: <a href="mailto:support@panoramagroup.com">support@Bizrolin.com</a>
+                                        General: <a href="mailto:info@Bizrolingroup.com">info@Bizrolin.com</a><br />
+                                        Support: <a href="mailto:support@Bizrolingroup.com">support@Bizrolin.com</a>
                                     </p>
                                 </div>
                             </div>
@@ -238,7 +238,7 @@ const Contact = () => {
                                     <h3>Call Us</h3>
                                     <p>
                                         Main: <a href="tel:+97142345678">+971 4 234 5678</a><br />
-                                        Toll Free: <a href="tel:800PANORAMA">800-PANORAMA</a>
+                                        Toll Free: <a href="tel:800Bizrolin">800-Bizrolin</a>
                                     </p>
                                 </div>
                             </div>
@@ -401,7 +401,7 @@ const Contact = () => {
                                         onChange={handleChange}
                                     />
                                     <label className="form-checkbox-label" htmlFor="privacyConsent">
-                                        I agree to the <a href="#">Privacy Policy</a> and consent to Panorama Group processing my data for the purpose of responding to my inquiry.
+                                        I agree to the <a href="#">Privacy Policy</a> and consent to Bizrolin Group processing my data for the purpose of responding to my inquiry.
                                     </label>
                                 </div>
                             </div>
@@ -460,9 +460,9 @@ const Contact = () => {
                             <img src="https://flagcdn.com/w80/ae.png" alt="UAE Flag" className="office-card-flag" />
                             <h3>Dubai (HQ)</h3>
                             <div className="office-card-location">United Arab Emirates</div>
-                            <p>Panorama Tower, Business Bay</p>
+                            <p>Bizrolin Tower, Business Bay</p>
                             <p><a href="tel:+97142345678">+971 4 234 5678</a></p>
-                            <p><a href="mailto:dubai@panoramagroup.com">dubai@panoramagroup.com</a></p>
+                            <p><a href="mailto:dubai@Bizrolingroup.com">dubai@Bizrolingroup.com</a></p>
                         </div>
 
                         <div className="office-card revealc-up">
@@ -471,7 +471,7 @@ const Contact = () => {
                             <div className="office-card-location">United Kingdom</div>
                             <p>30 St Mary Axe, London EC3A 8BF</p>
                             <p><a href="tel:+442071234567">+44 20 7123 4567</a></p>
-                            <p><a href="mailto:london@panoramagroup.com">london@panoramagroup.com</a></p>
+                            <p><a href="mailto:london@Bizrolingroup.com">london@Bizrolingroup.com</a></p>
                         </div>
 
                         <div className="office-card revealc-up">
@@ -480,7 +480,7 @@ const Contact = () => {
                             <div className="office-card-location">Singapore</div>
                             <p>Marina Bay Financial Centre</p>
                             <p><a href="tel:+6561234567">+65 6123 4567</a></p>
-                            <p><a href="mailto:singapore@panoramagroup.com">singapore@panoramagroup.com</a></p>
+                            <p><a href="mailto:singapore@Bizrolingroup.com">singapore@Bizrolingroup.com</a></p>
                         </div>
                     </div>
                 </div>
@@ -495,7 +495,7 @@ const Contact = () => {
                             FAQ
                         </div>
                         <h2 className="faq-title revealc-up">Frequently Asked Questions</h2>
-                        <p className="faq-subtitle revealc-up">Find answers to common questions about Panorama Group</p>
+                        <p className="faq-subtitle revealc-up">Find answers to common questions about Bizrolin Group</p>
                     </div>
 
                     <div className="faq-list">

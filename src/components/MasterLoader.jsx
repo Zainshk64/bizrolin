@@ -94,7 +94,7 @@ const HomeLoader = () => {
                         filter: 'drop-shadow(0 0 40px rgba(59,130,246,0.5))'
                     }}
                 >
-                    <img src="/logo.png" alt="Panorama Logo" style={{
+                    <img src="/logonew.png" alt="Bizrolin Logo" style={{
                         maxWidth: '300px',
                         width: '80vw',
                         height: 'auto'

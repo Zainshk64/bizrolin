@@ -4,7 +4,7 @@ const Hero = () => {
             <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center z-10">
                 <div className="about-hero-content reveal-up">
                     <span className="inline-block py-2 px-4 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-sm font-semibold tracking-wide mb-8 backdrop-blur-md">
-                        About Panorama
+                        About Bizrolin
                     </span>
                     <h1 className="text-5xl md:text-7xl font-display font-bold text-white leading-[1.1] mb-8">
                         Building a <span className="text-gradient">Better Tomorrow</span>

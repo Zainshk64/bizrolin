@@ -5,19 +5,19 @@ import gsap from 'gsap';
 
 const testimonials = [
     {
-        text: "Panorama Group represents the gold standard in diversified business excellence. Their commitment to innovation and sustainable growth sets them apart in today's global marketplace.",
+        text: "Bizrolin Group represents the gold standard in diversified business excellence. Their commitment to innovation and sustainable growth sets them apart in today's global marketplace.",
         author: "James Davidson",
         role: "CEO, Global Investments Corp",
         image: "https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?q=80&w=1470&auto=format&fit=crop"
     },
     {
-        text: "Working with Panorama has transformed our supply chain operations. Their expertise and global reach have been instrumental in our expansion across three continents.",
+        text: "Working with Bizrolin has transformed our supply chain operations. Their expertise and global reach have been instrumental in our expansion across three continents.",
         author: "Sarah Mitchell",
         role: "COO, TechVentures International",
         image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=687&auto=format&fit=crop"
     },
     {
-        text: "The level of professionalism and innovation at Panorama Group is unmatched. They don't just meet expectations – they consistently exceed them in every partnership.",
+        text: "The level of professionalism and innovation at Bizrolin Group is unmatched. They don't just meet expectations – they consistently exceed them in every partnership.",
         author: "Michael Chen",
         role: "Director, Asia Pacific Holdings",
         image: "https://plus.unsplash.com/premium_photo-1690407617542-2f210cf20d7e?q=80&w=687&auto=format&fit=crop"

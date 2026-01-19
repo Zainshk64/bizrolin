@@ -129,8 +129,8 @@ const Brands = () => {
             ]
         },
         // {
-        //     id: 'panorama-real-estate',
-        //     name: 'Panorama Real Estate',
+        //     id: 'Bizrolin-real-estate',
+        //     name: 'Bizrolin Real Estate',
         //     description: 'Premium property development and management creating iconic residential and commercial spaces in prime locations.',
         //     icon: <Building size={42} strokeWidth={1.5} />,
         //     fullWidth: false,
@@ -140,8 +140,8 @@ const Brands = () => {
         //     ]
         // },
         // {
-        //     id: 'panorama-healthcare',
-        //     name: 'Panorama Healthcare',
+        //     id: 'Bizrolin-healthcare',
+        //     name: 'Bizrolin Healthcare',
         //     description: 'Comprehensive healthcare solutions provider operating hospitals, clinics, and pharmaceutical distribution networks. Committed to improving lives through accessible and quality healthcare services.',
         //     icon: <HeartPulse size={42} strokeWidth={1.5} />,
         //     fullWidth: true,

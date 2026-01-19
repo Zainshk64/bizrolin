@@ -68,7 +68,7 @@ const About = () => {
             <div className="max-w-7xl mb-50 mx-auto relative z-10">
                 <div className="flex flex-col lg:flex-row justify-between gap-12 mb-20">
                     <div className='flex-3'>
-                        <div className="section-label"><span className="section-label-line"></span>About Panorama</div>
+                        <div className="section-label"><span className="section-label-line"></span>About Bizrolin</div>
                         <h2 className="section-title">Building Global Teams Through Pakistani Talent </h2>
                     </div>
                     <div className='flex-2'></div>

@@ -33,7 +33,7 @@ const CTA = () => {
 
                 {/* Subtitle */}
                 <p className="text-lg text-white/70 mb-12 max-w-xl mx-auto leading-relaxed reveal-up">
-                    {/* Join the Panorama family and be part of a legacy that's shaping the future of global business. */}
+                    {/* Join the Bizrolin family and be part of a legacy that's shaping the future of global business. */}
                     fast-growing recruitment company powered by professionals with deep, hands-on experience in global hiring.                </p>
 
                 {/* Buttons */}
