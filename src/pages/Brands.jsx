@@ -70,9 +70,9 @@ const Brands = () => {
     // Brand Data
     const brands = [
         {
-            id: 'global-resources',
-            name: 'Global Resources',
-            description: 'Our flagship trading company, Global Resources is a leader in international commodity trading and resource management, operating across 40+ countries with a focus on sustainable sourcing.',
+            id: 'Devrolin',
+            name: 'Devrolin',
+            description: 'Partnered with Bizrolin to deliver innovative tech solutions for business growth.',
             icon: <Globe size={42} strokeWidth={1.5} />,
             fullWidth: true,
             stats: [
@@ -85,9 +85,9 @@ const Brands = () => {
             image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1000&auto=format&fit=crop"
         },
         {
-            id: 'global-resources-uk',
-            name: 'Global Resources UK',
-            description: 'European headquarters managing operations across the UK and EU markets, specializing in refined products and sustainable energy solutions.',
+            id: 'CallRolin',
+            name: 'CallRolin',
+            description: 'Partnered with Bizrolin to deliver innovative tech solutions for business growth.',
             icon: <MapPin size={42} strokeWidth={1.5} />,
             fullWidth: false,
             stats: [
@@ -96,9 +96,9 @@ const Brands = () => {
             ]
         },
         {
-            id: 'system-technologies',
-            name: 'System Technologies',
-            description: 'Cutting-edge IT solutions provider delivering digital transformation, cloud services, and enterprise software to global clients.',
+            id: 'Wingsols',
+            name: 'Wingsols',
+            description: 'Collaborates with Bizrolin to provide cutting-edge digital and software services.',
             icon: <Cpu size={42} strokeWidth={1.5} />,
             fullWidth: false,
             stats: [
@@ -107,9 +107,9 @@ const Brands = () => {
             ]
         },
         {
-            id: 'panorama-foods',
-            name: 'Panorama Foods',
-            description: 'Premium food processing and distribution company serving millions of customers daily with quality products across 15 countries.',
+            id: 'Zobil',
+            name: 'Zobil',
+            description: 'Works alongside Bizrolin to offer creative design and branding solutions.',
             icon: <Utensils size={42} strokeWidth={1.5} />,
             fullWidth: false,
             stats: [
@@ -118,9 +118,9 @@ const Brands = () => {
             ]
         },
         {
-            id: 'panorama-entertainment',
-            name: 'Panorama Entertainment',
-            description: 'Leading entertainment company producing world-class content for cinema, streaming platforms, and live events globally.',
+            id: 'Edit Bureau',
+            name: 'Edit Bureau',
+            description: 'Assists Bizrolin with content, editing, and media solutions for professional outreach.',
             icon: <Film size={42} strokeWidth={1.5} />,
             fullWidth: false,
             stats: [
@@ -128,32 +128,32 @@ const Brands = () => {
                 { value: '50M', label: 'Viewers' }
             ]
         },
-        {
-            id: 'panorama-real-estate',
-            name: 'Panorama Real Estate',
-            description: 'Premium property development and management creating iconic residential and commercial spaces in prime locations.',
-            icon: <Building size={42} strokeWidth={1.5} />,
-            fullWidth: false,
-            stats: [
-                { value: '25+', label: 'Projects' },
-                { value: '$1.2B', label: 'Portfolio' }
-            ]
-        },
-        {
-            id: 'panorama-healthcare',
-            name: 'Panorama Healthcare',
-            description: 'Comprehensive healthcare solutions provider operating hospitals, clinics, and pharmaceutical distribution networks. Committed to improving lives through accessible and quality healthcare services.',
-            icon: <HeartPulse size={42} strokeWidth={1.5} />,
-            fullWidth: true,
-            stats: [
-                { value: '15', label: 'Hospitals' },
-                { value: '100+', label: 'Clinics' },
-                { value: '2M+', label: 'Patients/Year' }
-            ],
-            tags: ['Healthcare', 'Pharmaceuticals', 'Medical'],
-            // Modern Hospital image
-            image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=1000&auto=format&fit=crop"
-        }
+        // {
+        //     id: 'panorama-real-estate',
+        //     name: 'Panorama Real Estate',
+        //     description: 'Premium property development and management creating iconic residential and commercial spaces in prime locations.',
+        //     icon: <Building size={42} strokeWidth={1.5} />,
+        //     fullWidth: false,
+        //     stats: [
+        //         { value: '25+', label: 'Projects' },
+        //         { value: '$1.2B', label: 'Portfolio' }
+        //     ]
+        // },
+        // {
+        //     id: 'panorama-healthcare',
+        //     name: 'Panorama Healthcare',
+        //     description: 'Comprehensive healthcare solutions provider operating hospitals, clinics, and pharmaceutical distribution networks. Committed to improving lives through accessible and quality healthcare services.',
+        //     icon: <HeartPulse size={42} strokeWidth={1.5} />,
+        //     fullWidth: true,
+        //     stats: [
+        //         { value: '15', label: 'Hospitals' },
+        //         { value: '100+', label: 'Clinics' },
+        //         { value: '2M+', label: 'Patients/Year' }
+        //     ],
+        //     tags: ['Healthcare', 'Pharmaceuticals', 'Medical'],
+        //     // Modern Hospital image
+        //     image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=1000&auto=format&fit=crop"
+        // }
     ];
 
     return (

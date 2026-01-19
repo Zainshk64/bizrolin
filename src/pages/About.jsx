@@ -14,33 +14,33 @@ const About = () => {
     const values = [
         {
             icon: <Target size={40} strokeWidth={1.5} />,
-            title: "Integrity",
-            desc: "We do what's right, even when no one is watching. Honesty and transparency are the foundation of all our relationships."
+            title: "Global Talent Sourcing",
+            desc: "We identify and connect top-tier Pakistani professionals with international companies across multiple industries."
         },
         {
             icon: <Lightbulb size={40} strokeWidth={1.5} />,
-            title: "Innovation",
-            desc: "We constantly push boundaries and challenge the status quo to find better solutions for tomorrow's challenges."
+            title: "Pre-Vetted Recruitment",
+            desc: "Every candidate is carefully screened for skills, experience, and cultural fit to ensure quality from day one"
         },
         {
             icon: <Star size={40} strokeWidth={1.5} />,
-            title: "Excellence",
-            desc: "We strive for the highest standards in everything we do, never settling for anything less than our best."
+            title: "Remote & Offshore Hiring",
+            desc: "We help businesses build reliable remote teams with flexible hiring models tailored to their needs."
         },
         {
             icon: <Globe size={40} strokeWidth={1.5} />,
-            title: "Sustainability",
-            desc: "We're committed to creating value that lasts, protecting our planet for future generations."
+            title: "Permanent & Contract Placement",
+            desc: "From long-term roles to project-based hiring, we deliver talent that aligns with business goals."
         },
         {
             icon: <Users size={40} strokeWidth={1.5} />,
-            title: "People First",
-            desc: "Our people are our greatest asset. We invest in their growth and create an environment where they can thrive."
+            title: "Hiring Strategy & Support",
+            desc: "We guide companies through the hiring process, offering insights that simplify and accelerate global recruitment."
         },
         {
             icon: <Handshake size={40} strokeWidth={1.5} />,
-            title: "Collaboration",
-            desc: "We believe in the power of working together, both within our organization and with our partners."
+            title: "End-to-End Recruitment Management",
+            desc: "From sourcing to onboarding, we manage the process so clients can focus on growth."
         }
     ];
 
@@ -113,8 +113,7 @@ const About = () => {
                             Building a <span className="text-gradient">Better Tomorrow</span>
                         </h1>
                         <p data-scroll data-scroll-speed="0.5">
-                            For over 25 years, we've been pioneering innovation across industries. From humble beginnings to a global conglomerate, our journey is defined by excellence, integrity, and an unwavering commitment to creating value.
-                        </p>
+BizRolin is an all-in-one business ecosystem delivering smart, scalable solutions through innovation, strategy, and expert ventures, helping brands grow faster, operate smarter, and reach globally.                        </p>
                     </div>
                     <div className="about-hero-image-container" data-scroll data-scroll-speed="2">
                         <img
@@ -130,9 +129,9 @@ const About = () => {
                     <div className="story-grid">
                         <div className="story-content" data-scroll data-scroll-speed="1">
                             <h2>Our <span className="text-gradient">Story</span></h2>
-                            <p>What started as a small trading company in 1974 has grown into a diversified conglomerate spanning seven industries across 45 countries.</p>
-                            <p>Our founder's vision was simple: create businesses that not only generate profit but also contribute positively to society and the environment. This vision continues to guide us today.</p>
-                            <p>Through strategic acquisitions, organic growth, and a relentless focus on innovation, we've built a family of companies that are leaders in their respective fields.</p>
+                            <p>BizRolin is an all-in-one business ecosystem delivering smart, scalable solutions through innovation, strategy, and expert ventures, helping brands grow faster, operate smarter, and reach globally.</p>
+                            <p>BizRolin is an all-in-one business ecosystem delivering smart, scalable solutions through innovation, strategy, and expert ventures, helping brands grow faster, operate smarter, and reach globally.</p>
+                           
                         </div>
                         <div className="story-image-wrapper" data-scroll data-scroll-speed="2">
                             <img
@@ -165,7 +164,7 @@ const About = () => {
                 </section>
 
                 {/* Timeline Section */}
-                <section className="timeline-section" data-scroll-section>
+                {/* <section className="timeline-section" data-scroll-section>
                     <div className="section-header">
                         <h2>Our <span className="text-gradient">Journey</span></h2>
                         <p>Key milestones in our growth story</p>
@@ -181,7 +180,7 @@ const About = () => {
                             </div>
                         ))}
                     </div>
-                </section>
+                </section> */}
 
                 {/* Team Section */}
                 <section className="team-section" data-scroll-section>

@@ -213,7 +213,7 @@ const Contact = () => {
                                 </div>
                                 <div className="contact-card-content">
                                     <h3>Headquarters</h3>
-                                    <p>Panorama Tower, Business Bay<br />Dubai, United Arab Emirates</p>
+                                    <p>Bizrolin Business Bay<br />Blue Area ,Islamabad</p>
                                 </div>
                             </div>
 
@@ -224,8 +224,8 @@ const Contact = () => {
                                 <div className="contact-card-content">
                                     <h3>Email Us</h3>
                                     <p>
-                                        General: <a href="mailto:info@panoramagroup.com">info@panoramagroup.com</a><br />
-                                        Support: <a href="mailto:support@panoramagroup.com">support@panoramagroup.com</a>
+                                        General: <a href="mailto:info@panoramagroup.com">info@Bizrolin.com</a><br />
+                                        Support: <a href="mailto:support@panoramagroup.com">support@Bizrolin.com</a>
                                     </p>
                                 </div>
                             </div>
