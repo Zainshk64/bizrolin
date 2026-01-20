@@ -10,9 +10,9 @@ const footerLinks = {
     { name: "Contact", href: "/contact" },
   ],
   brands: [
-    { name: "Global Resources", href: "#" },
-    { name: "System Technologies", href: "#" },
-    { name: "Vision Chemtech", href: "#" },
+    { name: "Devrolin", href: "#" },
+    { name: "CallRoin", href: "#" },
+    { name: "Zobil", href: "#" },
   ],
   company: [
     { name: "Leadership", href: "#" },
@@ -23,7 +23,7 @@ const footerLinks = {
   contact: [
     { name: "Blue Area ,Islamabad", href: "#" },
     { name: "info@bizrolon.com", href: "mailto:info@bizrolin.com" },
-    { name: "+92 30303030", href: "tel:+92303030" },
+    { name: "+92 319 3595559", href: "tel: +92 319 3595559" },
   ],
 };
 

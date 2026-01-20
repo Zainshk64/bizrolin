@@ -9,7 +9,7 @@
 /* ============================================
    THEME CONFIGURATION
    ============================================ */
-/* @theme {
+@theme {
     --color-off-white: #F8FAFC;
     --color-gray-medium: #64748B;
     --color-dark: #1E293B;
@@ -43,65 +43,8 @@
     --animate-scroll-wheel: scroll-wheel 2s ease-in-out infinite;
     --animate-marquee: marquee 35s linear infinite;
     --animate-float-1: float-shape 20s ease-in-out infinite;
-} */
-
-@theme {
-  /* Base / Surface */
-  --color-white: #FFFFFF;
-  --color-off-white: #F9FBFF;
-  --color-surface: #F1F7FF;
-
-  /* Text */
-  --color-gray-light: #94A3B8;
-  --color-gray-medium: #64748B;
-  --color-dark: #1E293B;
-  --color-darker: #0F172A;
-
-  /* Primary – Light Blue System */
-  --color-primary-50: #F0F7FF;
-  --color-primary-100: #E0EFFF;
-  --color-primary-200: #C7E0FF;
-  --color-primary-300: #9CCBFF;
-  --color-primary-400: #6FB3FF;
-  --color-primary-500: #3B9BFF;   /* MAIN BRAND */
-  --color-primary-600: #1F7AE0;
-  --color-primary-700: #1559B2;
-  --color-primary-800: #0F3F85;
-  --color-primary-900: #0B2C5C;
-
-  /* Accent Blues (for glow, sparkles, layers) */
-  --color-sky-light: #E6F3FF;
-  --color-sky: #7DD3FC;
-  --color-sky-glow: #38BDF8;
-
-  /* Soft Support Accents (minimal use) */
-  --color-indigo-soft: #6366F1;
-  --color-cyan-soft: #22D3EE;
-
-  /* Gradients */
-  --gradient-primary: linear-gradient(
-    135deg,
-    #E0EFFF 0%,
-    #6FB3FF 50%,
-    #3B9BFF 100%
-  );
-
-  --gradient-glow: radial-gradient(
-    circle at center,
-    rgba(59,155,255,0.35),
-    transparent 70%
-  );
-
-  /* Fonts */
-  --font-sans: 'Inter', sans-serif;
-  --font-serif: 'Playfair Display', serif;
-
-  /* Motion */
-  --ease-premium: cubic-bezier(0.4, 0, 0.2, 1);
-  --animate-scroll-wheel: scroll-wheel 2s ease-in-out infinite;
-  --animate-marquee: marquee 35s linear infinite;
-  --animate-float-1: float-shape 20s ease-in-out infinite;
 }
+
 
 
 
