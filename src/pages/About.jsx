@@ -46,9 +46,9 @@ const About = () => {
 
     const team = [
         {
-            name: "Ahmed Al-Rashid",
-            role: "Chairman & CEO",
-            img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=687&auto=format&fit=crop"
+            name: "Zohaib Ejaz",
+            role: "Founder & CEO",
+            img: "./founder-image.jpeg"
         },
         {
             name: "Sarah Mitchell",
@@ -76,10 +76,10 @@ const About = () => {
     ];
 
     const stats = [
-        { label: "Countries", value: "45+" },
-        { label: "Employees", value: "15,000+" },
+        { label: "Countries", value: "15+" },
+        { label: "Employees", value: "50+" },
         { label: "Industries", value: "7" },
-        { label: "Revenue", value: "$10B+" }
+        { label: "Revenue", value: "$5M+" }
     ];
 
     return (
@@ -117,7 +117,7 @@ BizRolin is an all-in-one business ecosystem delivering smart, scalable solution
                     </div>
                     <div className="about-hero-image-container" data-scroll data-scroll-speed="2">
                         <img
-                            src="https://images.unsplash.com/photo-1766391374856-eccaa085b661?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            src="https://images.pexels.com/photos/3183183/pexels-photo-3183183.jpeg"
                             alt="Modern corporate architecture"
                             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                         />
@@ -139,7 +139,7 @@ BizRolin is an all-in-one business ecosystem delivering smart, scalable solution
                                 alt="Modern corporate headquarters representing growth"
                                 style={{ borderRadius: '30px', width: '100%', height: '500px', objectFit: 'cover' }}
                             />
-                            <div className="story-year">2024</div>
+                            <div className="story-year">2023</div>
                         </div>
                     </div>
                 </section>

@@ -236,9 +236,10 @@ const Contact = () => {
                                 </div>
                                 <div className="contact-card-content">
                                     <h3>Call Us</h3>
+
                                     <p>
-                                        Main: <a href="tel:+97142345678">+971 4 234 5678</a><br />
-                                        Toll Free: <a href="tel:800Bizrolin">800-Bizrolin</a>
+                                        Main: <a href="https://wa.me/923193595559">+92 319 3595559</a><br />
+                                        {/* Toll Free: <a href="tel:800Bizrolin">800-Bizrolin</a> */}
                                     </p>
                                 </div>
                             </div>
@@ -260,10 +261,10 @@ const Contact = () => {
                         <div className="contact-social revealc-left">
                             <h4>Follow Us</h4>
                             <div className="contact-social-links">
-                                <a href="#" className="social-link"><Linkedin size={20} /></a>
+                                <a href="https://www.linkedin.com/company/bizrolin/" className="social-link"><Linkedin size={20} /></a>
                                 <a href="#" className="social-link"><Twitter size={20} /></a>
                                 <a href="#" className="social-link"><Facebook size={20} /></a>
-                                <a href="#" className="social-link"><Instagram size={20} /></a>
+                                <a href="https://www.instagram.com/bizrolin?igsh=MmUxZXY2OWw4dDBi" className="social-link"><Instagram size={20} /></a>
                                 <a href="#" className="social-link"><Youtube size={20} /></a>
                             </div>
                         </div>
@@ -445,15 +446,16 @@ const Contact = () => {
                     </div>
 
                     <div className="map-wrapper revealc-scale">
-                        <iframe
-                            className="map-iframe"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.178510693867!2d55.26390731544387!3d25.197197983896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43348a67e24b%3A0xff45e502e1ceb7e2!2sBurj%20Khalifa!5e0!3m2!1sen!2sae!4v1629789012345!5m2!1sen!2sae"
-                            allowFullScreen=""
-                            loading="lazy"
-                            referrerPolicy="no-referrer-when-downgrade"
-                            title="Office Map"
-                        ></iframe>
+                         <iframe
+                        className='map-iframe'
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13274.607522983046!2d73.06085425044448!3d33.71795577073369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfbf9bc116caa3%3A0x337cd6075e732737!2sBlue%20Area%2C%20Islamabad%2C%20Pakistan!5e0!3m2!1sen!2s!4v1768989391290!5m2!1sen!2s"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
                     </div>
+
+                  
 
                     <div className="offices-grid">
                         <div className="office-card revealc-up">

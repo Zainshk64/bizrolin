@@ -82,7 +82,7 @@ const Brands = () => {
             ],
             tags: ['Commodities', 'Trading', 'Logistics'],
             // Ship/Port image
-            image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1000&auto=format&fit=crop"
+            image: "https://media.licdn.com/dms/image/v2/D4D0BAQHWY9H8s2Mdpg/company-logo_200_200/company-logo_200_200/0/1720938799238/devrolin_logo?e=2147483647&v=beta&t=0Pfm5rtgbkq-BG5ZL37b-cr-hrK1fgRr5rR1O03D2IY"
         },
         {
             id: 'CallRolin',
@@ -92,7 +92,7 @@ const Brands = () => {
             fullWidth: false,
             stats: [
                 { value: '8', label: 'EU Countries' },
-                { value: '$500M', label: 'Revenue' }
+                { value: '$5M+', label: 'Revenue' }
             ]
         },
         {

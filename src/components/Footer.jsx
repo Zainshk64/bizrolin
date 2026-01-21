@@ -21,9 +21,12 @@ const footerLinks = {
     { name: "Investors", href: "#" },
   ],
   contact: [
-    { name: "Blue Area ,Islamabad", href: "#" },
+    { name: "Blue Area,Islamabad", href: "#" },
     { name: "info@bizrolon.com", href: "mailto:info@bizrolin.com" },
-    { name: "+92 319 3595559", href: "tel: +92 319 3595559" },
+{
+  name: "+92 319 3595559",
+  href: "https://wa.me/923193595559"
+}
   ],
 };
 
@@ -149,7 +152,7 @@ const Footer = () => {
           <p className="text-slate-500 text-sm">
             © 2026 Bizrolin Group of Companies. All rights reserved.
           </p>
-          <div className="flex gap-8">
+          {/* <div className="flex gap-8">
             {["Privacy Policy", "Terms of Service", "Cookie Policy"].map(
               (item, index) => (
                 <a
@@ -161,7 +164,7 @@ const Footer = () => {
                 </a>
               ),
             )}
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
