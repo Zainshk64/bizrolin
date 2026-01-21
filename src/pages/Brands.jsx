@@ -77,8 +77,8 @@ const Brands = () => {
             fullWidth: true,
             stats: [
                 { value: '40+', label: 'Countries' },
-                { value: '$2.5B', label: 'Revenue' },
-                { value: '5000+', label: 'Employees' }
+                { value: '$5M', label: 'Revenue' },
+                { value: '200+', label: 'Employees' }
             ],
             tags: ['Commodities', 'Trading', 'Logistics'],
             // Ship/Port image
