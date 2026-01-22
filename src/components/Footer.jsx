@@ -1,6 +1,7 @@
 // src/components/Footer.jsx
 import { Link } from "react-router-dom";
 import { Linkedin, Twitter, Facebook, Instagram } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 const footerLinks = {
   quickLinks: [
@@ -31,10 +32,10 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { icon: Linkedin, href: "#" },
-  { icon: Twitter, href: "#" },
-  { icon: Facebook, href: "#" },
-  { icon: Instagram, href: "#" },
+  { icon: Linkedin, href: "https://www.linkedin.com/company/bizrolin/" },
+  // { icon: Facebook, href: "#" },
+  { icon: Instagram, href: "https://www.instagram.com/bizrolin?igsh=MmUxZXY2OWw4dDBi" },
+  { icon: FaWhatsapp, href: "https://wa.me/923193595559" },
 ];
 
 const Footer = () => {
