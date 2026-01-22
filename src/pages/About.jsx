@@ -50,21 +50,21 @@ const About = () => {
             role: "Founder & CEO",
             img: "./founder-image.jpeg"
         },
-        {
-            name: "Sarah Mitchell",
-            role: "Chief Operating Officer",
-            img: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=761&auto=format&fit=crop"
-        },
-        {
-            name: "Michael Chen",
-            role: "Chief Financial Officer",
-            img: "https://plus.unsplash.com/premium_photo-1689977807477-a579eda91fa2?q=80&w=1470&auto=format&fit=crop"
-        },
-        {
-            name: "Fatima Hassan",
-            role: "Chief Strategy Officer",
-            img: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=880&auto=format&fit=crop"
-        }
+        // {
+        //     name: "Sarah Mitchell",
+        //     role: "Chief Operating Officer",
+        //     img: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=761&auto=format&fit=crop"
+        // },
+        // {
+        //     name: "Michael Chen",
+        //     role: "Chief Financial Officer",
+        //     img: "https://plus.unsplash.com/premium_photo-1689977807477-a579eda91fa2?q=80&w=1470&auto=format&fit=crop"
+        // },
+        // {
+        //     name: "Fatima Hassan",
+        //     role: "Chief Strategy Officer",
+        //     img: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=880&auto=format&fit=crop"
+        // }
     ];
 
     const timeline = [
@@ -188,7 +188,11 @@ BizRolin is an all-in-one business ecosystem delivering smart, scalable solution
                         <h2>Leadership <span className="text-gradient">Team</span></h2>
                         <p>Meet the visionaries guiding our journey</p>
                     </div>
-                    <div className="team-grid">
+                <div>
+                    <img src="./team-img.jpeg" alt="" className='rounded-xl' srcset="" />
+
+                </div>
+                    {/* <div className="team-grid">
                         {team.map((member, index) => (
                             <div key={index} className="team-card hover-trigger" data-scroll data-scroll-speed={(1 + (index * 0.2)).toString()}>
                                 <div className="team-image-wrapper">
@@ -198,7 +202,7 @@ BizRolin is an all-in-one business ecosystem delivering smart, scalable solution
                                 <p>{member.role}</p>
                             </div>
                         ))}
-                    </div>
+                    </div> */}
                 </section>
 
                 {/* Stats Section */}
