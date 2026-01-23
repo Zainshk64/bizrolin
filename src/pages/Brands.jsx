@@ -180,7 +180,7 @@ const Brands = () => {
                 <section className="brands-hero">
                     <div className="brands-hero-content">
                         <h1>Our <span className="text-gradient">Brands</span></h1>
-                        <p>A diverse portfolio of excellence spanning seven industries and 45 countries worldwide.</p>
+                        <p>A diverse portfolio of excellence spanning 7+ industries and 5+ countries worldwide.</p>
                     </div>
                 </section>
 
