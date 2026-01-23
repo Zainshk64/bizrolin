@@ -367,7 +367,7 @@ We help global companies hire top-tier Pakistani talent through trusted, streaml
                             </div>
                             <div>
                                 <h4 className="text-sm font-semibold text-white mb-0.5">Global Presence</h4>
-                                <p className="text-xs text-slate-400">45+ Countries</p>
+                                <p className="text-xs text-slate-400">5+ Countries</p>
                             </div>
                         </div>
 
@@ -382,7 +382,7 @@ We help global companies hire top-tier Pakistani talent through trusted, streaml
                             </div>
                             <div>
                                 <h4 className="text-sm font-semibold text-white mb-0.5">Excellence</h4>
-                                <p className="text-xs text-slate-400">Since 1974</p>
+                                <p className="text-xs text-slate-400">Since 2023</p>
                             </div>
                         </div>
                     </div>

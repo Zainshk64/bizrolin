@@ -8,6 +8,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
     Globe,
+    Code2,
     ArrowUpRight,
     MapPin,
     Cpu,
@@ -15,7 +16,10 @@ import {
     Film,
     Building,
     HeartPulse,
-    ArrowRight
+    ArrowRight,
+    Headphones,
+    Palette,
+    PenTool
 } from 'lucide-react';
 
 // Reused Components
@@ -72,8 +76,8 @@ const Brands = () => {
         {
             id: 'Devrolin',
             name: 'Devrolin',
-            description: 'Partnered with Bizrolin to deliver innovative tech solutions for business growth.',
-            icon: <Globe size={42} strokeWidth={1.5} />,
+            description: 'Partnered with BizRolin to deliver innovative tech solutions for business growth.',
+            icon: <Code2 size={42} strokeWidth={1.5} />,
             fullWidth: true,
             stats: [
                 { value: '40+', label: 'Countries' },
@@ -87,8 +91,8 @@ const Brands = () => {
         {
             id: 'CallRolin',
             name: 'CallRolin',
-            description: 'Partnered with Bizrolin to deliver innovative tech solutions for business growth.',
-            icon: <MapPin size={42} strokeWidth={1.5} />,
+            description: 'Partnered with BizRolin to deliver innovative tech solutions for business growth.',
+            icon: <Headphones size={42} strokeWidth={1.5} />,
             fullWidth: false,
             stats: [
                 { value: '8', label: 'EU Countries' },
@@ -98,7 +102,7 @@ const Brands = () => {
         {
             id: 'Wingsols',
             name: 'Wingsols',
-            description: 'Collaborates with Bizrolin to provide cutting-edge digital and software services.',
+            description: 'Collaborates with BizRolin to provide cutting-edge digital and software services.',
             icon: <Cpu size={42} strokeWidth={1.5} />,
             fullWidth: false,
             stats: [
@@ -109,8 +113,8 @@ const Brands = () => {
         {
             id: 'Zobil',
             name: 'Zobil',
-            description: 'Works alongside Bizrolin to offer creative design and branding solutions.',
-            icon: <Utensils size={42} strokeWidth={1.5} />,
+            description: 'Works alongside BizRolin to offer creative design and branding solutions.',
+            icon: <Palette size={42} strokeWidth={1.5} />,
             fullWidth: false,
             stats: [
                 { value: '50+', label: 'Products' },
@@ -120,8 +124,8 @@ const Brands = () => {
         {
             id: 'Edit Bureau',
             name: 'Edit Bureau',
-            description: 'Assists Bizrolin with content, editing, and media solutions for professional outreach.',
-            icon: <Film size={42} strokeWidth={1.5} />,
+            description: 'Assists BizRolin with content, editing, and media solutions for professional outreach.',
+            icon: <PenTool size={42} strokeWidth={1.5} />,
             fullWidth: false,
             stats: [
                 { value: '100+', label: 'Productions' },
@@ -129,8 +133,8 @@ const Brands = () => {
             ]
         },
         // {
-        //     id: 'Bizrolin-real-estate',
-        //     name: 'Bizrolin Real Estate',
+        //     id: 'BizRolin-real-estate',
+        //     name: 'BizRolin Real Estate',
         //     description: 'Premium property development and management creating iconic residential and commercial spaces in prime locations.',
         //     icon: <Building size={42} strokeWidth={1.5} />,
         //     fullWidth: false,
@@ -140,8 +144,8 @@ const Brands = () => {
         //     ]
         // },
         // {
-        //     id: 'Bizrolin-healthcare',
-        //     name: 'Bizrolin Healthcare',
+        //     id: 'BizRolin-healthcare',
+        //     name: 'BizRolin Healthcare',
         //     description: 'Comprehensive healthcare solutions provider operating hospitals, clinics, and pharmaceutical distribution networks. Committed to improving lives through accessible and quality healthcare services.',
         //     icon: <HeartPulse size={42} strokeWidth={1.5} />,
         //     fullWidth: true,

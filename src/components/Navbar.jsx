@@ -19,18 +19,18 @@ const Navbar = () => {
     return (
         <nav
             ref={navbarRef}
-            className={`fixed top-0 left-0 w-full px-8 md:px-16 py-6 flex justify-between items-center z-[1000] transition-all duration-500 ease-premium ${isScrolled
+            className={`fixed top-0 left-0 w-full px-8 md:px-16 py-3 flex justify-between items-center z-[1000] transition-all duration-500 ease-premium ${isScrolled
                     ? 'bg-black/85 backdrop-blur-xl py-4 shadow-lg shadow-black/30 border-b border-slate-700/10'
                     : ''
                 }`}
         >
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3 group">
-                <span className="w-11 h-11 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center text-sm font-bold text-white shadow-lg shadow-primary-500/40 transition-all duration-300 group-hover:shadow-xl group-hover:shadow-primary-500/50 group-hover:-translate-y-0.5 animate-logo-float">
+                {/* <span className="w-11 h-11 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center text-sm font-bold text-white shadow-lg shadow-primary-500/40 transition-all duration-300 group-hover:shadow-xl group-hover:shadow-primary-500/50 group-hover:-translate-y-0.5 animate-logo-float">
                     BR
                 </span>
-                <span className="font-serif text-2xl font-bold text-white">BizRolin</span>
-                {/* <img src="./logonew.png" alt="BizRolin Logo" classname="h" /> */}
+                <span className="font-serif text-2xl font-bold text-white">BizRolin</span> */}
+                <img src="./logonew.png" alt="BizRolin Logo" className="w-25" />
             </Link>
 
             {/* Nav Links */}

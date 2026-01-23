@@ -22,8 +22,8 @@ const footerLinks = {
     { name: "Investors", href: "#" },
   ],
   contact: [
-    { name: "Blue Area,Islamabad", href: "#" },
-    { name: "info@bizrolon.com", href: "mailto:info@bizrolin.com" },
+    { name: "Blue Area, Islamabad", href: "#" },
+    { name: "info@bizrolin.com", href: "mailto:info@bizrolin.com" },
 {
   name: "+92 319 3595559",
   href: "https://wa.me/923193595559"
@@ -43,16 +43,18 @@ const Footer = () => {
     <footer className="bg-darkest pt-24 pb-10 px-8 md:px-16 border-t border-slate-700/10">
       <div className="max-w-6xl mx-auto">
         {/* Top Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-6 gap-12 lg:gap-16 mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-6 gap-12 lg:gap-13 mb-20">
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            <Link to="/" className="flex items-center gap-3 mb-6">
-              <span className="w-11 h-11 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center text-sm font-bold text-white shadow-lg shadow-primary-500/40">
+            <Link to="/" className="flex items-center gap-3 ">
+              {/* <span className="w-11 h-11 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center text-sm font-bold text-white shadow-lg shadow-primary-500/40">
                 BR
               </span>
               <span className="font-serif text-2xl font-bold text-white">
                 BizRolin
-              </span>
+              </span> */}
+                <img src="./logonew.png" alt="BizRolin Logo" width={60} />
+
             </Link>
             <p className="text-slate-400 leading-relaxed mb-8 max-w-xs">
               We help global companies hire top-tier Pakistani talent through
@@ -130,15 +132,15 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-white text-xs font-semibold uppercase tracking-widest mb-7">
+            <h4 className="text-white text-xs  font-semibold uppercase tracking-widest mb-7">
               Contact
             </h4>
-            <ul className="space-y-4">
+            <ul className="space-y-4 ">
               {footerLinks.contact.map((link, index) => (
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-slate-400 text-sm transition-all duration-300 hover:text-primary-400 hover:translate-x-1 inline-flex items-center gap-2"
+                    className="text-slate-400 inline-block text-sm transition-all duration-300 hover:text-primary-400 hover:translate-x-1 items-center gap-2"
                   >
                     {link.name}
                   </a>
@@ -151,7 +153,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="border-t border-slate-700/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-5">
           <p className="text-slate-500 text-sm">
-            © 2026 Bizrolin Group of Companies. All rights reserved.
+            © 2023 BizRolin Group of Companies. All rights reserved.
           </p>
           {/* <div className="flex gap-8">
             {["Privacy Policy", "Terms of Service", "Cookie Policy"].map(

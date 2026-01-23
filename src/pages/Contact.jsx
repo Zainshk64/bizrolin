@@ -236,7 +236,7 @@ const Contact = () => {
                   <p>
                     Bizrolin Business Bay
                     <br />
-                    Blue Area ,Islamabad
+                    Blue Area, Islamabad
                   </p>
                 </div>
               </div>
